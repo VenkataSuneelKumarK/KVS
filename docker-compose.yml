@@ -8,13 +8,13 @@ services:
     ports:
       - "8080:3000"
     volumes:
-      - /usr/app/node_modules
-      - "D:/coding/React app/kvs-shop:/usr/app"
+      - /app/node_modules
+      - "D:/coding/React app/kvs-shop:/app"
   tests:
     build:
       context: .
       dockerfile: Dockerfile.dev
     volumes:
-      - /usr/app/node_modules
-      - "D:/coding/React app/kvs-shop:/usr/app"
+      - /app/node_modules
+      - "D:/coding/React app/kvs-shop:/app"
     command: ["npm", "run", "test"]
