@@ -4,4 +4,4 @@ services:
 before_install:
   - docker build -t suneel4b5/kvs -f Dockerfile.dev .
 script:
-  - docker run -c CI=true suneel4b5/kvs npm run test
+  - docker run -e CI=true suneel4b5/kvs npm run test
