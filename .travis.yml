@@ -1,0 +1,7 @@
+sudo: required
+services:
+  - docker
+before_install:
+  - docker build -t suneel4b5/kvs -f Dockerfile.dev .
+script:
+  - docker run -c CI=true suneel4b5/kvs npm run test
