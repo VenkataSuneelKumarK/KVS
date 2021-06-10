@@ -7,7 +7,7 @@ script:
   - docker run -e CI=true suneel4b5/kvs npm run test
 deploy:
   provider: elasticbeanstalk
-  region: "ap-south-12"
+  region: "ap-south-1"
   app: "KVS"
   env: "Kvs-env"
   bucket_name: "elasticbeanstalk-ap-south-1-314292627665"
